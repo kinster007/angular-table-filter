@@ -1,0 +1,10 @@
+Search : <input type="text" [(ngModel)]="searchText">
+<br><br>
+<table border="1">
+  <tbody>
+    <tr *ngFor="let item of data | tableFilter:searchText:'name'">
+      <td>{{item.name}}</td>
+      <td>{{item.price}}</td>
+    </tr>
+  </tbody>
+</table>
